@@ -1,0 +1,118 @@
+JumpTest 0.4.2 - 04.02.12
+Added:
+*Score counter
+*menu-type placeholders (Press Enter to get into the game when in one such menu)
+*multiple resolution support (code-wise. Still can't change your resolutions)	
+*"current version" message at the bottom.
+
+Changed:
+*Game resolution. Was 800x600, is 1280x1024. 
+*various values (jump height to test bigger resolution, platform speed)
+*The ability to re-load platforms is back. For now.
+
+Fixed:
+*A broken loop loading a nonexistant part of an array crashing the game
+
+Bugs:
+*Platforms randomly appear and dissapear. Will try to fix this later.
+*Main menu doesn't appear in the released version
+
+Notes:
+*Collision detection is still in works, and the sides of the platform will not cause collision detection to activate.
+*Need moar platforms
+*The original files were made for 800x600, hence the box-type problem.
+
+
+JumpTest 0.4.1 (No client backup available) - 02.02.12
+Added:
+It's now possible to autoupdate the game from http://zingmars.net78.net/updates (free servers + .net updater ahoy!)
+
+JumpTest 0.4 - 02.02.12
+Added:
+*Collision detection!
+ *Right now it's kind of primitive - it checks for the center of both player and platform
+ *and will do its thing if they're close. It's primitive because it's not really precise
+*More platforms to make the collision detection easier to test
+*Jumping on a platform should make you jump even higher!
+Changed:
+*Jumping is back!
+*The pseudo-random platform generation is nov even more pseudo-random, as the value is seeded with the current ToD.
+Removed:
+*The screen is no longer scrolling all the time
+Notes:
+*The platforms will stack up. It's not exactly a bug, but it's not a feature either. I'll have to change the algorithm a bit.
+*Source code included!
+
+JumpTest 0.3.2 - 02.02.12
+Added:
+*Platforms will now randomly change their x coordinates when re-appearing at the top of the screen
+
+Changed:
+*The platforms will now be initalized when the game is loaded, instead of the Update(); method
+
+Removed:
+*You can no longer manually re-generate platforms.
+
+Notes: This project will be now cloned. The code I have right now will be used for a future project called
+"Rainbow crash". This project however will be continued to produce a doodle-jump type game.
+
+JumpTest 0.3.1 - 01.02.12
+Added:
+*Testing out scrolling. 
+ *Platforms will now re-appear at the top of the screen when below the client window!
+
+Changed:
+*The player can no longer jump, and will move upwards at all times. This is to test my primitive way of scrolling.
+*Nov every platform has different x and y coordinates instead of both being the same. Fixed the stairs bug!
+
+Notes:
+*Going to add platform re-assigning soon.
+*I'll need to reserve more space for more platforms soon
+
+JumpTest 0.3 - 01.02.12
+Removed:
+*Exit
+*Any use of the 'new' platform spawning algorithm
+
+Changed:
+*Nothing, except some minor things related to platform spawning.
+
+Added:
+*Randomly generated platforms! FINALLY!
+
+Bugs:
+*For some reason whenever I generate platforms, they seem to stutter, not to mention they look like stairs. I think I need to seed the random function to fix this!
+
+Notes:
+*Apparently coordinates no longer display weird values when you land. That's awesome!
+*That code added in 0.2.1 is probably going to be removed soon. The way I did random platform spawning doesn't really use it.
+*Also including source code with this
+*Press "R" to regenerate platforms
+
+JumpTest 0.2.1 - 01.02.12
+Removed:
+*platforms
+Added:
+*code that allows me to spawn platforms everywhere
+*single lone platform in the middle of the screen to test a certain thing
+
+JumpTest 0.2 - 31.01.12
+The second version. Removed a lot of things. No installer, as functionality seems to be broken :/
+Features added: 
+*Proper jumping code. Now uses gravity and all that good stuff. 
+*The player will now try to catch up with the mouse instead of moving with the mouse, giving a cool movement effect.
+Bugs: [Fixed]
+*For some reason the Y coordinate seems to be messed up when the player lands,  while the player seems to be
+at the right place. No idea what causes this, and if it's just my code failing to update the 'Y' counter.
+I guess I have to be at the lookout.
+
+JumpTest 0.1 - 22.01.12
+The first version. Supposedly is a full game. Also has installer.
+Features added:
+*Jumping works. Kind of. See bug 1.
+*Collision works. Also kind of. Also you can jump off from platforms! yay!
+*The exit kind of works. See bug 2.
+Bugs: [Both fixed in newer versions]
+*Jumps fail when the player reaches next lowest platoform +player height. When there's no more platforms in sight -
+there aren't any problems. 
+*Just move to the right side of the screen to 'win'. Caused by buggy 'if' check.
